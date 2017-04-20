@@ -4,5 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <br />
     <br />
-    Bienvenido al sistema de administrador
+    Bienvenido al sistema de administrador !!!!!!!
 </asp:Content>
