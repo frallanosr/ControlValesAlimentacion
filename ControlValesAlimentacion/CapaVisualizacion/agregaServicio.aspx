@@ -42,27 +42,25 @@
                          		<td></td>
                          	</tr>
                          </table>
-                          <asp:TextBox ID="nombreDelServicio" runat="server" CssClass="form-control" placeholder="Nombre del servicio" ></asp:TextBox>   
+                              <asp:TextBox ID="nombreDelServicio" runat="server" CssClass="form-control" placeholder="Nombre del servicio" ></asp:TextBox>   
 
                           <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="P_CARGO" DataValueField="P_CARGO"></asp:DropDownList>
 
                           <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>' SelectCommand='SELECT "P_CARGO" FROM "PERFIL"'></asp:SqlDataSource>
 
                           <asp:TextBox ID="valorDelServicio" runat="server" CssClass="form-control" placeholder="Valor del servicio" ></asp:TextBox>   
-                          
                           <table border="0">
                               <tr>
                                   <td>Inicio:</td>
-                                  <td width="30%"><input type="time" id="horaInicio" class="form-control"/></td>
-                                 
+                                  <td width="30%"><input type="time" name="horaInicio" class="form-control"/></td>
                                   <td><span class="glyphicon">&#xe141;</span></td>
                                   <td>Fin:</td>
-                                  <td width="30%"><input type="time" id="horaFin" class="form-control" /></td>
+                                  <td width="30%"><input type="time" name="horaFin" class="form-control" /></td>
                                   <td><span class="glyphicon">&#xe141;</span></td>
                               </tr>
                           </table>       
                           <center>
-                              <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click" CssClass="btn btn-danger" ValidationGroup="btn"/>
+                              <asp:Button ID="Button1" runat="server" Text="Agregar" CssClass="btn btn-danger" ValidationGroup="btn"/>
                           </center>                  
                       </div>
                 </div>

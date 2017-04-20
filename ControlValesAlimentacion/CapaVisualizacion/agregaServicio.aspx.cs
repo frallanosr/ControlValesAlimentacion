@@ -13,13 +13,5 @@ namespace CapaVisualizacion
         {
 
         }
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string nombreServicio = this.nombreDelServicio.Text;
-            string nombrePerfil = this.DropDownList1.Text;
-            int valorServicio = Convert.ToInt32(this.valorDelServicio.Text);
-            //DateTime horaInicio = 
-
-        }
     }
 }
