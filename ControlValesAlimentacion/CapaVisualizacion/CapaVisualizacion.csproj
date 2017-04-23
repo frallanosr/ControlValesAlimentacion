@@ -103,6 +103,7 @@
     <Content Include="agregaServicio.aspx" />
     <Content Include="agregaUsuario.aspx" />
     <Content Include="homeAdministrador.aspx" />
+    <Content Include="IMG\logo_seta %281%29.png" />
     <Content Include="IMG\LOGO_SETA.jpg" />
     <Content Include="IMG\LOGO_SETA.png" />
     <Content Include="logout.aspx" />

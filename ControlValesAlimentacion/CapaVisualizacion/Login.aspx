@@ -12,7 +12,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Forms</title>
+        <title>Inicio de Sesion</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/datepicker3.css" rel="stylesheet">
@@ -34,7 +34,7 @@
                                     </legend>
                                 <div class="form-group ">
                                     <asp:TextBox ID="rut" name="rut" class="input_rut form-control col-lg-4" onfocus="lastfocus = this;" autofocus="autofocus"  runat="server"></asp:TextBox>
-                                  <%--  <input type="test" id="rut" name="rut" class="input_rut form-control col-lg-4" onfocus="lastfocus = this;" autofocus="autofocus" />--%>
+                            
                                 </div>
                                 <div class="form-group">
                                     <center>
@@ -49,25 +49,25 @@
 <tr>
 <td align="center" style="padding-right: 40px;"><table align="right">
 <tr>
-<td><input onclick="clave('7', 'campo');" type="button" value="7" name="7" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('8', 'campo');" type="button" value="8" name="8" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('9', 'campo');" type="button" value="9" name="9" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
+<td><input onclick="clave('7', 'campo');" type="button" value="7" name="7" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>&nbsp;<br>
+<td><input onclick="clave('8', 'campo');" type="button" value="8" name="8" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>&nbsp;<br>
+<td><input onclick="clave('9', 'campo');" type="button" value="9" name="9" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>&nbsp;<br>
 </tr>
 <tr>
-<td><input onclick="clave('4', 'campo');" type="button" value="4" name="4" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('5', 'campo');" type="button" value="5" name="5" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('6', 'campo');" type="button" value="6" name="6" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
+<td><input onclick="clave('4', 'campo');" type="button" value="4" name="4" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
+<td><input onclick="clave('5', 'campo');" type="button" value="5" name="5" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
+<td><input onclick="clave('6', 'campo');" type="button" value="6" name="6" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
 </tr>
 <tr>
-<td><input onclick="clave('1', 'campo'); QuitarFoco();" type="button" value="1" name="1" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('2', 'campo');" type="button" value="2" name="2" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-<td><input onclick="clave('3', 'campo');" type="button" value="3" name="3" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
+<td><input onclick="clave('1', 'campo'); QuitarFoco();" type="button" value="1" name="1" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
+<td><input onclick="clave('2', 'campo');" type="button" value="2" name="2" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
+<td><input onclick="clave('3', 'campo');" type="button" value="3" name="3" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
 </tr>
 
  <tr>
-        <td><input onclick="clave('k', 'campo');" type="button" value="K" name="k" id="boton" style="height: 40px; width: 40px" class="btn btn-primary"></td>
-        <td><input onclick="clave('0', 'campo');" type="button" value="0" name="0" id="boton" style="height: 40px; width: 40px"  ></td>
-        <td><input type="reset" value="DEL" name="DEL" id="boton" style="height: 40px; width: 40px"></td>
+        <td><input onclick="clave('k', 'campo');" type="button" value="K" name="k" id="boton" style="height: 80px; width: 80px" class="btn btn-primary"></td>
+        <td><input onclick="clave('0', 'campo');" type="button" value="0" name="0" id="boton" style="height: 80px; width: 80px"  ></td>
+        <td><input type="reset" value="DEL" name="DEL" id="boton" style="height: 80px; width: 80px"></td>
     </tr>
 
 

@@ -2,6 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style type="text/css">
+        #contenedor{
+            border-left-style: solid;
+            border-right-style: solid;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            width: 75%;
+            height: 55%;
+        }
+    </style>
+     <center>
+<div id="contenedor" >
     <form id="form1" runat="server" onsubmit="javascript:return WebForm_OnSubmit();">
         <br />
         <br />
@@ -119,4 +131,6 @@
 
   
 </form>
+</div>
+</center>
 </asp:Content>

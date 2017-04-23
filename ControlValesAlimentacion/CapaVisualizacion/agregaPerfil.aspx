@@ -2,11 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      <br>
      <script type="text/javascript" src="js/jquery.js"></script>
      <script src="js/alertifyjs/alertify.min.js"></script>
      <script src="js/modernizr-custom.js"></script>
      <link rel="stylesheet" type="text/css" href="css/stiloPopUp.css">
         
+        <style type="text/css">
+    #contenedor{
+      border-left-style: solid;
+      border-right-style: solid;
+      border-top-style: solid;
+      border-bottom-style: solid;
+      width: 75%;
+      height: 55%;
+    }
+    
+  </style>
 <form id="form1" runat="server">
       <!--AREA DONDE SE CREA EL CONTENIDO DEL POPUP -->
        <div id="popup" style="display: none;">
@@ -26,7 +38,7 @@
                          <td>
                              <br />
                              <asp:DropDownList ID="DropDownList1" runat="server">
-                                 <asp:ListItem Selected="True" Value="0">--Seleccione--</asp:ListItem>
+                                 <asp:ListItem Selected="True" Value="0" cssClass="form-control">--Seleccione--</asp:ListItem>
                                     <asp:ListItem Value="normal">Normal</asp:ListItem>
                                     <asp:ListItem Value="conPrivilegios">Con Privilegios</asp:ListItem>
                                     <asp:ListItem Value="cajero">Cajero</asp:ListItem>
@@ -50,13 +62,13 @@
               </div>
           </div>
       </div>
-
+      <center>
+<div id="contenedor" >
 <div id="Content">
      <center>
                 <br />
                 <br />
-                <br />
-                <br />
+                
                 
                 <p>
                   <a id="open" >
@@ -83,6 +95,10 @@
                 
     </center>
 </div>
+  <br />
+                <br />
+</div>
+</center>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="UPDATE &quot;PERFIL&quot; SET &quot;P_ESTADO&quot; = 0 WHERE &quot;IDPERFIL&quot; = :IDPERFIL" InsertCommand="INSERT INTO &quot;PERFIL&quot; (&quot;IDPERFIL&quot;, &quot;P_CARGO&quot;, &quot;P_ESTADO&quot;, &quot;P_TIPOUSUARIO&quot;) VALUES (:IDPERFIL, :P_CARGO, :P_ESTADO, :P_TIPOUSUARIO)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT &quot;IDPERFIL&quot;, &quot;P_CARGO&quot; FROM &quot;PERFIL&quot; where &quot;P_ESTADO&quot; = 1" UpdateCommand="UPDATE &quot;PERFIL&quot; SET &quot;P_CARGO&quot; = :P_CARGO, &quot;P_ESTADO&quot; = :P_ESTADO, &quot;P_TIPOUSUARIO&quot; = :P_TIPOUSUARIO WHERE &quot;IDPERFIL&quot; = :IDPERFIL">
             <DeleteParameters>
                 <asp:Parameter Name="IDPERFIL" Type="Decimal" />

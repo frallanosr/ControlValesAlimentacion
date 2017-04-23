@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.Servicio
 {
-    class Servicio
+    public class Servicio
     {
-        string nombre { get; set; }
-        string nombrePerfil { get; set; }
-        int valorServicio { get; set; }
-        DateTime horaInicio { get; set; }
-        DateTime horaFin { get; set; }
+        public string nombre { get; set; }
+        public string nombrePerfil { get; set; }
+        public int valorServicio { get; set; }
+        public DateTime horaInicio { get; set; }
+        public DateTime horaFin { get; set; }
 
         public Servicio(string nombre, string nombrePerfil, int valorServicio, DateTime horaInicio, DateTime horaFin)
         {

@@ -53,12 +53,14 @@
                           <table border="0">
                               <tr>
                                   <td>Inicio:</td>
-                                  <td width="30%"><input type="time" id="horaInicio" class="form-control"/></td>
-                                 
-                                  <td><span class="glyphicon">&#xe141;</span></td>
+                                  <td width="30%">
+                                      
+                                      <asp:TextBox ID="horaInicio" runat="server" TextMode="Time" CssClass="form-control"></asp:TextBox>
+                                  </td><td><span class="glyphicon">&#xe141;</span></td>
                                   <td>Fin:</td>
-                                  <td width="30%"><input type="time" id="horaFin" class="form-control" /></td>
-                                  <td><span class="glyphicon">&#xe141;</span></td>
+                                  <td width="30%">
+                                  <asp:TextBox ID="horaFin" runat="server" TextMode="Time" CssClass="form-control"></asp:TextBox>    
+                                  </td><td><span class="glyphicon">&#xe141;</span></td>
                               </tr>
                           </table>       
                           <center>
@@ -79,9 +81,51 @@
                     <span class="glyphicon glyphicon-plus"></span>
                         Agregar Servicio
                   </a>
+                </p>
+                <p>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="IDSERVICIO" DataSourceID="SqlDataSource2" GridLines="None">
+                        <Columns>
+                            <asp:BoundField DataField="IDSERVICIO" HeaderText="N°" ReadOnly="True" SortExpression="IDSERVICIO" />
+                            <asp:BoundField DataField="SE_NOMBRE" HeaderText="NOMBRE SERVICIO" SortExpression="SE_NOMBRE" />
+                            <asp:BoundField DataField="SE_VALOR" HeaderText="VALOR" SortExpression="SE_VALOR" />
+                            <asp:BoundField DataField="EXPR1" HeaderText="HORA INICIO" SortExpression="EXPR1" />
+                            <asp:BoundField DataField="EXPR2" HeaderText="HORA FIN" SortExpression="EXPR2" />
+                            <asp:BoundField DataField="SE_NOMBREPERFIL" HeaderText="NOMBRE PERFIL" SortExpression="SE_NOMBREPERFIL" />
+                        </Columns>
+                        <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+                        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
+                        <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+                        <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#33276A" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM &quot;SERVICIO&quot; WHERE &quot;IDSERVICIO&quot; = :IDSERVICIO" InsertCommand="INSERT INTO &quot;SERVICIO&quot; (&quot;IDSERVICIO&quot;, &quot;SE_NOMBRE&quot;, &quot;SE_VALOR&quot;, &quot;SE_INICIO&quot;, &quot;SE_TERMINO&quot;, &quot;SE_NOMBREPERFIL&quot;) VALUES (:IDSERVICIO, :SE_NOMBRE, :SE_VALOR, :SE_INICIO, :SE_TERMINO, :SE_NOMBREPERFIL)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT IDSERVICIO, SE_NOMBRE, SE_VALOR, to_char(SE_INICIO, 'HH:MI') AS EXPR1, to_char(SE_TERMINO, 'HH:MI') AS EXPR2, SE_NOMBREPERFIL FROM SERVICIO" UpdateCommand="UPDATE &quot;SERVICIO&quot; SET &quot;SE_NOMBRE&quot; = :SE_NOMBRE, &quot;SE_VALOR&quot; = :SE_VALOR, &quot;SE_INICIO&quot; = :SE_INICIO, &quot;SE_TERMINO&quot; = :SE_TERMINO, &quot;SE_NOMBREPERFIL&quot; = :SE_NOMBREPERFIL WHERE &quot;IDSERVICIO&quot; = :IDSERVICIO">
+                        <DeleteParameters>
+                            <asp:Parameter Name="IDSERVICIO" Type="Decimal" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="IDSERVICIO" Type="Decimal" />
+                            <asp:Parameter Name="SE_NOMBRE" Type="String" />
+                            <asp:Parameter Name="SE_VALOR" Type="Decimal" />
+                            <asp:Parameter Name="SE_INICIO" Type="DateTime" />
+                            <asp:Parameter Name="SE_TERMINO" Type="DateTime" />
+                            <asp:Parameter Name="SE_NOMBREPERFIL" Type="String" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="SE_NOMBRE" Type="String" />
+                            <asp:Parameter Name="SE_VALOR" Type="Decimal" />
+                            <asp:Parameter Name="SE_INICIO" Type="DateTime" />
+                            <asp:Parameter Name="SE_TERMINO" Type="DateTime" />
+                            <asp:Parameter Name="SE_NOMBREPERFIL" Type="String" />
+                            <asp:Parameter Name="IDSERVICIO" Type="Decimal" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
                 </p> 
     </div>
-
+      
     
          </center>
 
