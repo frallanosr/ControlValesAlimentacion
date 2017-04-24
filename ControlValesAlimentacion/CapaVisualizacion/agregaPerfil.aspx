@@ -37,8 +37,9 @@
                      <tr>
                          <td>
                              <br />
-                             <asp:DropDownList ID="DropDownList1" runat="server">
-                                 <asp:ListItem Selected="True" Value="0" cssClass="form-control">--Seleccione--</asp:ListItem>
+                             <!--CODIGO COMBOBOX DROPDOWNLIST-->
+                             <asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
+                                 <asp:ListItem Selected="True" Value="0" CssClass="form-control">- Tipo Usuario -</asp:ListItem>
                                     <asp:ListItem Value="normal">Normal</asp:ListItem>
                                     <asp:ListItem Value="conPrivilegios">Con Privilegios</asp:ListItem>
                                     <asp:ListItem Value="cajero">Cajero</asp:ListItem>
@@ -67,20 +68,19 @@
 <div id="Content">
      <center>
                 <br />
-                <br />
-                
-                
                 <p>
                   <a id="open" >
+
                     <span class="glyphicon glyphicon-plus"></span>
-                        Agregar Perfil
+                    
+                         <span> Agregar Perfil</span>
                   </a>
                 </p> 
-          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="IDPERFIL" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="table" DataKeyNames="IDPERFIL" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
               <Columns>
-                  <asp:BoundField DataField="IDPERFIL" HeaderText="IDPERFIL" ReadOnly="True" SortExpression="IDPERFIL" />
-                  <asp:BoundField DataField="P_CARGO" HeaderText="P_CARGO" SortExpression="P_CARGO" />
-                  <asp:CommandField ShowDeleteButton="True" ShowEditButton="True"  />
+                  <asp:BoundField DataField="IDPERFIL" HeaderText="ID" ReadOnly="True" SortExpression="IDPERFIL" />
+                  <asp:BoundField DataField="P_CARGO" HeaderText="CARGO" SortExpression="P_CARGO" />
+                  <asp:CommandField ShowDeleteButton="True" ShowEditButton="True"  HeaderText="ACCIONES" />
               </Columns>
               <FooterStyle BackColor="White" ForeColor="#000066" />
               <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
