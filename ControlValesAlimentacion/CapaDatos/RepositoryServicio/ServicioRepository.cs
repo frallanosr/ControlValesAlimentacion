@@ -18,7 +18,7 @@ namespace CapaDatos.RepositoryServicio
             this.conexion = ConfigurationManager.ConnectionStrings["ConOracle"].ToString();
         }
 
-
+        //excepcion con se_nombreperfeil
         public void insertaServicio(Servicio s) {
             using (OracleConnection cn = new OracleConnection(this.conexion))
             {
