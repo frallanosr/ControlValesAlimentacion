@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WebServices/" targetNamespace="http://WebServices/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="segunda" type="tns:segunda" />
+  <xs:element name="segundaResponse" type="tns:segundaResponse" />
+  <xs:complexType name="segunda">
+    <xs:sequence>
+      <xs:element name="idperfil" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="segundaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
